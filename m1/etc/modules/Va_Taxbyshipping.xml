@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Va_Taxbyshipping>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Va_Taxbyshipping>
+    </modules>
+</config> 

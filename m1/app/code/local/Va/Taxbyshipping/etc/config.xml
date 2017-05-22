@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Va_Taxbyshipping>
+            <version>0.1.0</version>
+        </Va_Taxbyshipping>
+    </modules>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <taxbyshipping>
+                                            <title>Tax By Shipping</title>
+                                        </taxbyshipping>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml> 
+    <global>
+        <models>
+            <taxbyshipping>
+                <class>Va_Taxbyshipping_Model</class>
+            </taxbyshipping>
+            <tax_resource>
+                <rewrite>
+                    <calculation>Va_Taxbyshipping_Model_Tax_Calculation</calculation>
+                </rewrite>
+            </tax_resource>
+        </models>
+        <helpers>
+            <taxbyshipping>
+                <class>Va_Taxbyshipping_Helper</class>
+            </taxbyshipping>
+        </helpers>
+    </global>
+</config>
